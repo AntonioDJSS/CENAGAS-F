@@ -42,7 +42,7 @@ export default function Hero() {
                   href="#"
                   className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-indigo-400 hover:bg-gray-50 md:py-4 md:px-10 md:text-lg"
                 >
-                  Saber más
+                  Prueba Gratuita
                 </a>
               </button>
             </div>
