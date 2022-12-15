@@ -67,11 +67,11 @@ export default function ForgotPassword() {
                 <div className="bg-white py-6 px-3 shadow sm:rounded-lg sm:px-10">
                   <div className="grid grid-row-3 gap-3">
                     <div>
-                      <img
+                      {/* <img
                         className="mx-auto h-12 w-auto"
                         src="https://imgur.com/fWWekZ9.png"
                         alt="Your Company"
-                      />
+                      /> */}
                       <h2 className="mt-2 text-center text-3xl font-bold tracking-tight text-gray-900">
                         Recupera tú contraseña
                       </h2>

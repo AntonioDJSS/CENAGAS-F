@@ -11,6 +11,7 @@ export default function CheckPassword() {
   const [contraseña, setContraseña] = useState("");
   const [confirmarContraseña, setConfirmarContraseña] = useState("");
   const [alerta, setAlerta] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if ([contraseña, confirmarContraseña].includes("")) {
@@ -63,9 +64,132 @@ export default function CheckPassword() {
 
   return (
     <>
-      <div class="h-screen">
-        <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="w-full max-w-md">
+      <div className="relative bg-gradient-to-r from-indigo-200 to-indigo-400">
+        <img
+          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-20"
+          src="https://images.unsplash.com/photo-1637607698829-de4171988e79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          alt="fondo"
+        />
+        <div class="h-screen relative">
+          <div className="flex min-h-full items-center justify-center sm:px-6 lg:px-8">
+            <div className="w-full max-w-md">
+              {/* Este es el comienzo de div blanco */}
+              <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
+                <div className="bg-white py-6 px-3 shadow sm:rounded-lg sm:px-10">
+                  <div className="grid grid-row-3 gap-3">
+                    <div>
+                      {/* <img
+                        className="mx-auto h-12 w-auto"
+                        src="https://imgur.com/fWWekZ9.png"
+                        alt="Your Company"
+                      /> */}
+                      <h2 className="mt-2 text-center text-3xl font-bold tracking-tight text-gray-900">
+                        {`${
+                          alerta.statusPage
+                            ? "El token no existe, no puedes realizar esta acción."
+                            : "¡Estas a un paso!"
+                        } `}
+                      </h2>
+                      <p className="mt-1  text-center text-sm text-gray-600">
+                        {`${
+                          alerta.statusPage
+                            ? "Es posible que tu token haya expirado,"
+                            : "Recupera tú contraseña,"
+                        } `}
+                        <span className="font text-indigo-500">
+                          {`${
+                            alerta.statusPage
+                              ? "intentalo de nuevo."
+                              : "recuerda utilizar numeros y caracteres especiales."
+                          } `}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-6">
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center">
+                        <div className="w-full border-t border-gray-300" />
+                      </div>
+                      <div className="relative flex justify-center text-sm"></div>
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    {msg && <Alerta alerta={alerta} />}
+                  </div>
+                  <form onClick={handleSubmit} className="mt-4 space-y-4">
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Contraseña
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="contraseña"
+                          name="contraseña"
+                          type="password"
+                          autoComplete="contraseña"
+                          value={contraseña}
+                          onChange={(e) => setContraseña(e.target.value)}
+                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="password"
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        Confirmar contraseña
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="checkPassword"
+                          name="checkPassword"
+                          type="password"
+                          autoComplete="checkPassword"
+                          value={confirmarContraseña}
+                          onChange={(e) =>
+                            setConfirmarContraseña(e.target.value)
+                          }
+                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center"></div>
+
+                      <div className="text-sm">
+                        <a
+                          href="/forgot-password"
+                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                        >
+                          Volver al inicio
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <button
+                        type="submit"
+                        className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      >
+                        Resetear contraseña
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              {/* <Footer /> */}
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div className="w-full max-w-md">
             <div>
               <img
                 className="mx-auto h-12 w-auto"
@@ -161,9 +285,7 @@ export default function CheckPassword() {
               </div>
             </form>
             <Footer />
-          </div>
-        </div>
-      </div>
+          </div> */}
     </>
   );
 }

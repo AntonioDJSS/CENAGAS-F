@@ -94,14 +94,14 @@ export default function SignIn() {
           src="https://images.unsplash.com/photo-1614029951470-ef9eb9952be7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="fondo"
         />
-        <div class="h-screen relative">
+        <div class="relative">
           <div className="flex min-h-full items-center justify-center sm:px-6 lg:px-8">
             {showModal ? (
               <>
                 <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
                   <div className="relative w-auto my-6 mx-auto max-w-5xl">
                     {/*Contenido*/}
-                    <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                    <div className=" border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                       {/*Cabecera*/}
                       <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                         <h3 className="text-xl font-semibold">
@@ -230,15 +230,15 @@ export default function SignIn() {
             ) : null}
             <div className="w-full max-w-md">
               {/* Este es el comienzo de div blanco */}
-              <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
-                <div className="bg-white py-6 px-3 shadow sm:rounded-lg sm:px-10">
+              <div className="my-6 sm:mx-auto sm:w-full sm:max-w-md">
+                <div className=" bg-white py-6 px-3 shadow sm:rounded-lg sm:px-10">
                   <div className="grid grid-row-3 gap-3">
                     <div>
-                      <img
+                      {/* <img
                         className="mx-auto h-12 w-auto"
                         src="https://imgur.com/fWWekZ9.png"
                         alt="Your Company"
-                      />
+                      /> */}
                       <h2 className="mt-2 mb-4 text-center text-3xl font-bold tracking-tight text-gray-900">
                         ¡Crea tú cuenta para generar constancias!
                       </h2>
