@@ -1,13 +1,10 @@
-import { LockClosedIcon } from "@heroicons/react/20/solid";
-import Footer from "./Footer";
-
 export default function Login() {
   return (
     <>
-      <div className="bg-indigo-300">
+      <div className="relative bg-gradient-to-r from-indigo-200 to-indigo-400">
         <img
-          className="absolute bg-no-repeat bg-cover blur-md"
-          src="../src/assets/img/gradient.jpg"
+          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-20"
+          src="https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="fondo"
         />
         <div class="h-screen relative">
@@ -29,7 +26,7 @@ export default function Login() {
                       <p className="mt-1 text-center text-sm text-gray-600">
                         o{" "}
                         <a
-                          href="#"
+                          href="/registro"
                           className="font-medium text-indigo-600 hover:text-indigo-700"
                         >
                           registrate para acceder a la plataforma.
@@ -171,7 +168,7 @@ export default function Login() {
 
                       <div className="text-sm">
                         <a
-                          href="#"
+                          href="/forgot-password"
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           ¿Olvidaste tu contraseña?

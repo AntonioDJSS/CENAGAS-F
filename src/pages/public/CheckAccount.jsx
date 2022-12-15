@@ -87,7 +87,6 @@ const CheckAccount = () => {
                 } `}
               </a>
             </p>
-            <Footer />
           </div>
         </div>
       </div>
