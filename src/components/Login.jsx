@@ -1,9 +1,9 @@
 export default function Login() {
   return (
     <>
-      <div className="relative bg-gradient-to-r from-indigo-200 to-indigo-400">
+      <div className="relative bg-gradient-to-r from-indigo-100 to-indigo-200">
         <img
-          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-20"
+          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-[0.15]"
           src="https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="fondo"
         />
@@ -125,7 +125,6 @@ export default function Login() {
                           name="email"
                           type="email"
                           autoComplete="email"
-                          required
                           className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>
@@ -144,7 +143,6 @@ export default function Login() {
                           name="password"
                           type="password"
                           autoComplete="current-password"
-                          required
                           className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                         />
                       </div>

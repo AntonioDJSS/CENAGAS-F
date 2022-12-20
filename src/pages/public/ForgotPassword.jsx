@@ -53,9 +53,9 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <div className="relative bg-gradient-to-r from-indigo-200 to-indigo-400">
+      <div className="relative bg-gradient-to-r from-indigo-100 to-indigo-200">
         <img
-          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-20"
+          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-[0.15]"
           src="https://images.unsplash.com/photo-1637607698829-de4171988e79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="fondo"
         />

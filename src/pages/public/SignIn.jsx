@@ -1,13 +1,6 @@
 import { useState } from "react";
 import servidorAxios from "../../config/servidorAxios";
 import Alerta from "../../components/Alerta";
-import {
-  Button,
-  Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-} from "@material-tailwind/react";
 
 export default function SignIn() {
   const [nombre, setNombre] = useState("");
@@ -88,13 +81,13 @@ export default function SignIn() {
 
   return (
     <>
-      <div className="relative bg-gradient-to-r from-indigo-200 to-indigo-400">
+      <div className="relative bg-gradient-to-r from-indigo-100 to-indigo-200">
         <img
-          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-20"
+          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-[0.15]"
           src="https://images.unsplash.com/photo-1614029951470-ef9eb9952be7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="fondo"
         />
-        <div class="relative">
+        <div class="relative h-screen">
           <div className="flex min-h-full items-center justify-center sm:px-6 lg:px-8">
             {showModal ? (
               <>
@@ -235,10 +228,10 @@ export default function SignIn() {
                   <div className="grid grid-row-3 gap-3">
                     <div>
                       {/* <img
-                        className="mx-auto h-12 w-auto"
-                        src="https://imgur.com/fWWekZ9.png"
-                        alt="Your Company"
-                      /> */}
+                      className="mx-auto h-12 w-auto"
+                      src="https://imgur.com/fWWekZ9.png"
+                      alt="Your Company"
+                    /> */}
                       <h2 className="mt-2 mb-4 text-center text-3xl font-bold tracking-tight text-gray-900">
                         ¡Crea tú cuenta para generar constancias!
                       </h2>
