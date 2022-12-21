@@ -52,9 +52,9 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="absolute  w-full">
       <div
-        className="pointer-events-none absolute inset-0 z-30 shadow"
+        className="mx-[70px] pointer-events-none absolute inset-0 z-30 opacity-50"
         aria-hidden="true"
       />
       <div className="relative z-20">
@@ -83,35 +83,35 @@ export default function Header() {
               >
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="font-medium text-sm text-white  hover:text-indigo-200"
                 >
-                  Home
+                  Inicio
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-sm font-medium text-white hover:text-indigo-200"
                 >
                   Planes
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-sm font-medium text-white hover:text-indigo-200"
                 >
-                  Docs
+                  Generar Constancias
                 </a>
                 <Popover>
                   {({ open }) => (
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                          open ? "text-indigo-200" : "text-white",
+                          "group inline-flex items-center rounded-md text-sm font-medium focus:outline-none focus:ring-2"
                         )}
                       >
-                        <span>Otras Soluciones</span>
+                        <span>Ayuda y asistencias</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
+                            open ? "text-white" : "text-white",
                             "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
@@ -188,13 +188,21 @@ export default function Header() {
               </Popover.Group>
             </div>
             <div className="flex items-center md:ml-12">
+              <div className=" mr-6 md:border md:border-y-[16px] md:opacity-[0.15]"></div>
               <a
                 href="#"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-sm font-medium text-white hover:text-indigo-200"
               >
                 Inicia Sesión
               </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-white hover:text-indigo-200 ml-8"
+              >
+                Registrarse
+              </a>
             </div>
+            
           </div>
         </div>
       </div>
@@ -277,7 +285,7 @@ export default function Header() {
                   href="#"
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
                 >
-                  Docs
+                  Generar cosntancias
                 </a>
                 <a
                   href="#"

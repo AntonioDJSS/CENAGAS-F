@@ -14,10 +14,10 @@ export const LandingPage = () => {
       <Header />
       <Hero />
       <Incentives />
-      <Testimoniales />
+      {/* <Testimoniales />
       <Pricing />
       <Servicios />
-      <Faqs />
+      <Faqs /> */}
       <FooterLanding />
     </>
   );

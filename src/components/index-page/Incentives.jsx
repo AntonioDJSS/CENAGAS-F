@@ -24,14 +24,14 @@ const incentives = [
 export default function Incentives() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
+      <div className=" py-24 sm:px-2 sm:py-12 lg:px-4">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-10 gap-x-8 px-4 lg:max-w-none lg:grid-cols-3">
           {incentives.map((incentive) => (
             <div
               key={incentive.name}
-              className="text-center sm:flex sm:text-left lg:block lg:text-center"
+              className="text-center sm:flex sm:text-left lg:block lg:text-center bg-[#f5f5f5]"
             >
-              <div className="sm:flex-shrink-0">
+              {/* <div className="sm:flex-shrink-0">
                 <div className="flow-root">
                   <img
                     className="mx-auto h-24 w-28"
@@ -39,7 +39,7 @@ export default function Incentives() {
                     alt=""
                   />
                 </div>
-              </div>
+              </div> */}
               <div className="mt-3 sm:mt-0 sm:ml-3 lg:mt-3 lg:ml-0">
                 <h3 className="text-sm font-medium text-gray-900">
                   {incentive.name}

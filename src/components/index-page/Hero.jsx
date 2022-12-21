@@ -1,54 +1,77 @@
-export default function Hero() {
+import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
+
+const bogliasco = "https://imgur.com/Ku9QeEx.png";
+const countyClare = "https://imgur.com/WtPyw3c.png";
+const clare = "https://imgur.com/fARkwOZ.png";
+
+export default function hero() {
   return (
-    <div className="relative bg-gradient-to-r from-indigo-400 to-indigo-300">
-      <video
-        src="https://media.geeksforgeeks.org/wp-content/uploads/20221105184949/ezgif.com-gif-maker.mp4"
-        autoplay="{true}"
-        loop
-        muted
-        className="absolute inset-0 h-full w-full object-cover opacity-20"
-      ></video>
-      <main className="lg:relative">
-        <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
-          <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
-            <h1 className="text-4xl font-bold tracking-tight text-indigo-50 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <div className="">
-                <span className=" block xl:inline font-extrabold text-transparent bg-clip-text text-black">
-                  Generador Masivo
-                </span>{" "}
-              </div>
-              <div className="my-2">
-                <span className=" shadow-lg  bg-gradient-to-r from-indigo-600 to-indigo-400 font-extrabold block text-indigo-50 xl:inline">
-                  Constancias DC-3
-                </span>
-              </div>
+    <HeroSlider
+      height={"100vh"}
+      autoplay
+      controller={{
+        initialSlide: 1,
+        slidingDuration: 250,
+        slidingDelay: 100,
+        onSliding: (nextSlide) =>
+          console.debug("onSliding(nextSlide): ", nextSlide),
+        onBeforeSliding: (previousSlide, nextSlide) =>
+          console.debug(
+            "onBeforeSliding(previousSlide, nextSlide): ",
+            previousSlide,
+            nextSlide
+          ),
+        onAfterSliding: (nextSlide) =>
+          console.debug("onAfterSliding(nextSlide): ", nextSlide),
+      }}
+    >
+      <Overlay>
+        <div className="flex justify-center flex-col w-full h-full">
+          <div className="mx-auto">
+            <h1 className=" text-white uppercase w-full h-full text-4xl font-bold">
+              GENERADOR DC-3
             </h1>
-            <p className="mx-auto mt-3 max-w-md text-lg text-gray-50 sm:text-xl md:mt-5 md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+          </div>
+          <div className="mx-auto px-28 lg:pt-5 lg:px-96">
+            <p className="text-white text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              porta volutpat eleifend. consectetur adipiscing elit. Vivamus
+              porta volutpat eleifend. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Vivamus porta volutpat eleifend. consectetur
+              adipiscing elit. Vivamus porta volutpat eleifend
             </p>
-            <div className="transition duration-150 ease-in-out mt-10 sm:flex sm:justify-center lg:justify-start">
-              <button className=" rounded-md">
-                <a
-                  href="#"
-                  className=" flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 px-8 py-3 text-base font-medium text-white hover:bg-indigo-500 md:py-4 md:px-10 md:text-lg"
-                >
-                  Regístrate
-                </a>
-              </button>
-              <button className="mt-3 rounded-md sm:mt-0 sm:ml-3">
-                <a
-                  href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-indigo-400 hover:bg-gray-50 md:py-4 md:px-10 md:text-lg"
-                >
-                  Prueba Gratuita
-                </a>
-              </button>
+            <div className="mx-auto mt-5">
+              <button className="mr-5 text-xs font-bold bg-gradient-to-r bg-indigo-700 shadow text-white px-4 py-2 rounded-3xl">Prueba gratuita</button>
+              <button className="text-xs font-bold text-white" >Más información</button>
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </Overlay>
+
+      <Slide
+        // shouldRenderMask
+        label="Generador de constancias empresariales"
+        background={{
+          backgroundImageSrc: bogliasco,
+        }}
+      />
+
+      <Slide
+        // shouldRenderMask
+        label="Generador de constancias DC-3"
+        background={{
+          backgroundImageSrc: countyClare,
+        }}
+      />
+      <Slide
+        // shouldRenderMask
+        label="Planes y costos"
+        background={{
+          backgroundImageSrc: clare,
+        }}
+      />
+
+      <MenuNav />
+    </HeroSlider>
   );
 }
