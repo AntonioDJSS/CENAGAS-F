@@ -1,83 +1,71 @@
-import { StarIcon } from "@heroicons/react/20/solid";
-
-const reviews = [
-  {
-    id: 1,
-    title: "Can't say enough good things",
-    rating: 5,
-    content: `
-      <p>I was really pleased with the overall shopping experience. My order even included a little personal, handwritten note, which delighted me!</p>
-      <p>The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!</p>
-    `,
-    author: "Risako M",
-    date: "May 16, 2021",
-    datetime: "2021-01-06",
-  },
-  // More reviews...
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
+import Incentives from "./Incentives";
+import Planes from "./Planes";
+ 
 export default function Testimoniales() {
+  const data = [
+    {
+      label: "Associate",
+      value: "html",
+      desc: `It really matters and then like it really doesn't matter.
+      What matters is the people who are sparked by it. And the people 
+      who are like offended by it, it doesn't matter.`,
+    },
+    {
+      label: "Professional",
+      value: "react",
+      desc: `Because it's about motivating the doers. Because I'm here
+      to follow my dreams and inspire other people to follow their dreams, too.`,
+    },
+ 
+    {
+      label: "Enterprise",
+      value: "vue",
+      desc: `We're not always in the position that we want to be at.
+      We're constantly growing. We're constantly making mistakes. We're 
+      constantly trying to express ourselves and actualize our dreams.`,
+    },
+    {
+      label: "Complementos",
+      value: "svelt",
+      desc: `We're not always in the position that we want to be at.
+      We're constantly growing. We're constantly making mistakes. We're 
+      constantly trying to express ourselves and actualize our dreams.`,
+    },
+
+  ];
+ 
   return (
-    <div className="bg-gray-50 mt-10">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-lg font-medium text-gray-900">Recent reviews</h2>
-        <div className="mt-6 space-y-10 divide-y divide-gray-200 border-t border-b border-gray-200 pb-10">
-          {reviews.map((review) => (
-            <div
-              key={review.id}
-              className="pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8"
-            >
-              <div className="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
-                <div className="flex items-center xl:col-span-1">
-                  <div className="flex items-center">
-                    {[0, 1, 2, 3, 4].map((rating) => (
-                      <StarIcon
-                        key={rating}
-                        className={classNames(
-                          review.rating > rating
-                            ? "text-yellow-400"
-                            : "text-gray-200",
-                          "h-5 w-5 flex-shrink-0"
-                        )}
-                        aria-hidden="true"
-                      />
-                    ))}
-                  </div>
-                  <p className="ml-3 text-sm text-gray-700">
-                    {review.rating}
-                    <span className="sr-only"> out of 5 stars</span>
-                  </p>
-                </div>
-
-                <div className="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
-                  <h3 className="text-sm font-medium text-gray-900">
-                    {review.title}
-                  </h3>
-
-                  <div
-                    className="mt-3 space-y-6 text-sm text-gray-500"
-                    dangerouslySetInnerHTML={{ __html: review.content }}
-                  />
-                </div>
-              </div>
-
-              <div className="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
-                <p className="font-medium text-gray-900">{review.author}</p>
-                <time
-                  dateTime={review.datetime}
-                  className="ml-4 border-l border-gray-200 pl-4 text-gray-500 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
-                >
-                  {review.date}
-                </time>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="bg-[#f1f1f1] ">
+    <Tabs id="custom-animation" value="html" className="mx-2">
+      <TabsHeader className="my-2 bg-[#f1f1f1] pt-8">
+        {data.map(({ label, value }) => (
+          <Tab key={value} value={value} className="mx-5">
+            {label}
+          </Tab>
+        ))}
+      </TabsHeader>
+      <TabsBody
+      className="my-3 "
+        animate={{
+          mount: { y: 0 },
+          unmount: { y: 250 },
+        }}
+      >
+        {data.map(({ value, desc }) => (
+          <TabPanel key={value} value={value}>
+            <Planes/>
+          </TabPanel>
+        ))}
+      </TabsBody>
+    </Tabs>
     </div>
+
   );
 }
