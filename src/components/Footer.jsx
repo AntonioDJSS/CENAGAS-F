@@ -3,7 +3,7 @@ const añoActual = date.getFullYear();
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-[#f1f1f1]">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="border-t border-warm-gray-700 pt-8">
           <div className="mt-8 md:order-1 md:mt-0">

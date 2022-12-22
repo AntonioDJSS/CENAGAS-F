@@ -91,13 +91,19 @@ export default function Header() {
                   href="#"
                   className="text-sm font-medium text-white hover:text-indigo-200"
                 >
-                  Planes
+                  Generar Constancias
                 </a>
                 <a
                   href="#"
                   className="text-sm font-medium text-white hover:text-indigo-200"
                 >
-                  Generar Constancias
+                  Mi historial
+                </a>
+                <a
+                  href="#"
+                  className="text-sm font-medium text-white hover:text-indigo-200"
+                >
+                  Planes
                 </a>
                 <Popover>
                   {({ open }) => (
@@ -202,7 +208,6 @@ export default function Header() {
                 Registrarse
               </a>
             </div>
-            
           </div>
         </div>
       </div>
