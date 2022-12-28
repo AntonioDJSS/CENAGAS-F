@@ -22,23 +22,6 @@ const incentives = [
   },
 ];
 
-const incentives2 = [
-  {
-    name: "Inicia tú prueba gratuita",
-    description:
-      "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
-    imageSrc: "bg-[url('https://imgur.com/VrhforX.png')]",
-    link: "Leer más",
-  },
-  {
-    name: "Contrata el plan Associate",
-    description:
-      "Our AI chat widget is powered by a naive series of if/else statements. Guaranteed to irritate.",
-    imageSrc: "bg-[url('https://imgur.com/YWWE7VP.png')]",
-    link: "Free trail",
-  },
-];
-
 export default function Incentives() {
   return (
     <div className="bg-white">

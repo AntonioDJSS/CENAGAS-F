@@ -3,7 +3,6 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Outlet } from "react-router-dom";
 import AvatarCard from "../components/dashboard-index/AvatarCard";
-import Footer from "../components/Footer";
 
 const user = {
   name: "Tom Cook",
@@ -147,7 +146,6 @@ export default function DashboardLayout() {
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <Outlet />
-            <Footer />
             {/* /End replace */}
           </div>
         </main>

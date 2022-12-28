@@ -1,4 +1,3 @@
-import Footer from "../../components/Footer";
 import { Link, useParams } from "react-router-dom";
 import servidorAxios from "../../config/servidorAxios";
 import Alerta from "../../components/Alerta";

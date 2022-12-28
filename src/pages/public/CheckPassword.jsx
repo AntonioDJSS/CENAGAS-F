@@ -1,6 +1,5 @@
 import { DocumentCheckIcon } from "@heroicons/react/20/solid";
 import servidorAxios from "../../config/servidorAxios";
-import Footer from "../../components/Footer";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import Alerta from "../../components/Alerta";
@@ -284,7 +283,6 @@ export default function CheckPassword() {
                 </div>
               </div>
             </form>
-            <Footer />
           </div> */}
     </>
   );
