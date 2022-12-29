@@ -283,10 +283,11 @@ export default function Example() {
               )}
             </Popover>
           </Popover.Group>
-          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <button className="button text-[15px] font-medium text-white">
-              <span className="opacity-100">Iniciar Sesión</span>
-              <div className=" bg-white px-4 py-1 h-8 w-32 rounded-full opacity-[0.15] hover:opacity-[0.25]"></div>
+          <div className="relative hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <button className="absolute button text-[15px] font-medium">
+              <div className="bg-white px-4 py-1 h-8 w-36 rounded-full opacity-[0.15] hover:opacity-[0.25]">
+                <span className="opacity-100">Iniciar Sesión</span>
+              </div>
             </button>
           </div>
         </div>
