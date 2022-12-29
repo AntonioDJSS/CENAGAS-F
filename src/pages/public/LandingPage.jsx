@@ -11,10 +11,6 @@ export const LandingPage = () => {
     <>
       <Header />
       <Hero />
-      <Incentives />
-      <SliderPlanes />
-      <Faqs />
-      <FooterLanding />
       {/*<Pricing />
       <Servicios /> */}
     </>
