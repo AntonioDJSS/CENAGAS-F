@@ -9,7 +9,6 @@ import SliderPlanes from "../../components/index-page/SliderPlanes";
 export const LandingPage = () => {
   return (
     <>
-      <Header />
       <Hero />
       {/*<Pricing />
       <Servicios /> */}

@@ -97,17 +97,17 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Header() {
   return (
-    <Popover className="absolute w-full">
+    <Popover className="absolute w-full z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-8 w-auto duration-500 sm:h-[26px] hover:opacity-50 hover:duration-500"
+                src="https://imgur.com/DTd9B5Z.png"
                 alt=""
               />
             </a>
@@ -125,10 +125,10 @@ export default function Example() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-white",
-                      "group inline-flex items-center rounded-md text-[15px] font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      "group inline-flex items-center rounded-md text-[15px] duration-500 font-medium hover:text-white hover:duration-500 hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>Soluciones</span>
                   </Popover.Button>
 
                   <Transition
@@ -189,15 +189,21 @@ export default function Example() {
 
             <a
               href="#"
-              className="text-[15px] font-medium text-white hover:text-gray-900"
+              className="text-[15px] font-medium text-white hover:text-white duration-500 hover:duration-500 hover:opacity-70"
             >
-              Pricing
+              Nosotros
             </a>
             <a
               href="#"
-              className="text-[15px] font-medium text-white hover:text-gray-900"
+              className="text-[15px] font-medium text-white hover:text-white duration-500 hover:duration-500 hover:opacity-70"
             >
-              Docs
+              Planes
+            </a>
+            <a
+              href="#"
+              className="text-[15px] font-medium text-white hover:text-white duration-500 hover:duration-500 hover:opacity-70"
+            >
+              Documentación
             </a>
 
             <Popover className="relative">
@@ -206,7 +212,7 @@ export default function Example() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-white",
-                      "group inline-flex items-center rounded-md text-[15px] font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      "group inline-flex items-center rounded-md text-[15px] duration-500 hover:duration-500 font-medium hover:text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     )}
                   >
                     <span>More</span>
@@ -283,10 +289,10 @@ export default function Example() {
               )}
             </Popover>
           </Popover.Group>
-          <div className="relative hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <button className="absolute button text-[15px] font-medium">
-              <div className="bg-white px-4 py-1 h-8 w-36 rounded-full opacity-[0.15] hover:opacity-[0.25]">
-                <span className="opacity-100">Iniciar Sesión</span>
+          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <button className="-mt-4 absolute button text-[15px] font-medium">
+            <span className="top-[26px] opacity-100 text-white">Sign in</span>
+              <div className=" bg-white duration-500 px-4 py-1 h-8 w-24 rounded-full opacity-[0.25] hover:opacity-[0.40] hover:duration-500">
               </div>
             </button>
           </div>
