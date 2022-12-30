@@ -104,7 +104,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">ucerti</span>
               <img
                 className="h-8 w-auto duration-500 sm:h-[26px] hover:opacity-50 hover:duration-500"
                 src="https://imgur.com/DTd9B5Z.png"
@@ -291,9 +291,8 @@ export default function Header() {
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
             <button className="-mt-4 absolute button text-[15px] font-medium">
-            <span className="top-[26px] opacity-100 text-white">Sign in</span>
-              <div className=" bg-white duration-500 px-4 py-1 h-8 w-24 rounded-full opacity-[0.25] hover:opacity-[0.40] hover:duration-500">
-              </div>
+              <span className="top-[26px] opacity-100 text-white">Log in</span>
+              <div className=" bg-white duration-500 px-4 py-1 h-8 w-24 rounded-full opacity-[0.25] hover:opacity-[0.40] hover:duration-500"></div>
             </button>
           </div>
         </div>
