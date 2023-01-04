@@ -2,7 +2,7 @@ import React from "react";
 
 const CardImage = () => {
   return (
-    <div className="-mt-14 mx-auto absolute flex w-full items-center justify-center z-40">
+    <div className="mx-auto absolute flex w-full items-center justify-center z-40">
       <div className="w-full">
         <div className="flex mx-auto max-w-6xl">
           <div className="basis-1/4 border-l border-[#f3f4f6]">

@@ -11,8 +11,8 @@ const Card02 = () => {
               Plataforma unificada
             </h3>
             <div className="flex">
-              <a className="group underline-text-animation-a basis-1/2 font-medium text-[38px] text-[#0A2540] leading-[2.75rem]">
-                <span className="underline-text-animation-span-to-r">
+              <a className="group underline-text-animation-a basis-1/2 font-medium text-[38px] text-[#0A2540] leading-[2.75rem] my-3">
+                <span className="underline-text-animation-span-to-r font-semibold">
                   Un solo paquete integrado de productos para pagos
                 </span>
               </a>
@@ -37,7 +37,7 @@ const Card02 = () => {
             <div className="flex mt-5">
               <div className="basis-1/4">
                 <img
-                  src="https://imgur.com/srFLPcP.png"
+                  src="https://imgur.com/ZI1NiIb.png"
                   className="mt-5 h-10"
                 />
                 <p className="mt-5 text-[15px] mr-5 font-medium text-[#0A2540]">
@@ -52,7 +52,7 @@ const Card02 = () => {
               </div>
               <div className="basis-1/4">
                 <img
-                  src="https://imgur.com/srFLPcP.png"
+                  src="https://imgur.com/KdyCWCJ.png"
                   className="mt-5 h-10"
                 />
                 <p className="mt-5 text-[15px] mr-5 font-medium text-[#0A2540]">
@@ -67,7 +67,7 @@ const Card02 = () => {
               </div>
               <div className="basis-1/4">
                 <img
-                  src="https://imgur.com/srFLPcP.png"
+                  src="https://imgur.com/A88Hdrm.png"
                   className="mt-5 h-10"
                 />
                 <p className="mt-5 text-[15px] mr-5 font-medium text-[#0A2540]">
@@ -82,7 +82,7 @@ const Card02 = () => {
               </div>
               <div className="basis-1/4">
                 <img
-                  src="https://imgur.com/srFLPcP.png"
+                  src="https://imgur.com/JE9I1N3.png"
                   className="mt-5 h-10"
                 />
                 <p className="mt-5 text-[15px] mr-5 font-medium text-[#0A2540]">
