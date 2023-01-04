@@ -1,12 +1,11 @@
 import React from "react";
+
 import "../../css/gradient.css";
 
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
 import Header from "../Header";
 import GradientAnimation from "./Gradient";
 
-export default function Example() {
+export default function Hero() {
   return (
     <>
       <Header />

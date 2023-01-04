@@ -1,17 +1,14 @@
 import React from "react";
-import Header from "../../components/Header";
-import Faqs from "../../components/index-page/Faqs";
-import FooterLanding from "../../components/index-page/Footer";
-import Hero from "../../components/index-page/Hero";
-import Incentives from "../../components/index-page/Incentives";
-import SliderPlanes from "../../components/index-page/SliderPlanes";
+import Card02 from "../../components/home/Card02";
+import CardImage from "../../components/home/CardImage";
+import Hero from "../../components/home/Hero";
 
 export const LandingPage = () => {
   return (
     <>
       <Hero />
-      {/*<Pricing />
-      <Servicios /> */}
+      <CardImage />
+      <Card02 />
     </>
   );
 };
