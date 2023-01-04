@@ -195,7 +195,7 @@ export function Carousel() {
   return (
     <section>
       <div className="w-full bg-white">
-        <div className="py-24">
+        <div className="py-20">
           <div className="mx-auto max-w-6xl">
             <div className="flex">
               <a className="group underline-text-animation-a basis-7/12 font-medium text-[38px] text-[#0A2540] leading-[2.75rem] my-3">
