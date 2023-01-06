@@ -8,7 +8,6 @@ export const LandingPage = () => {
   return (
     <>
       <Hero />
-      <CardImage />
       <Card02 />
       <Carousel />
     </>

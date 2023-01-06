@@ -3,7 +3,7 @@ import "../../css/gradient.css";
 
 const Card02 = () => {
   return (
-    <div className="mt-[14rem]">
+    <div className="">
       <div className="w-full bg-[#f6f9fc]">
         <div className="py-24">
           <div className="mx-auto max-w-6xl">

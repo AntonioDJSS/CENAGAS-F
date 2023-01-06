@@ -112,7 +112,7 @@ export default function Header() {
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -123,8 +123,8 @@ export default function Header() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-gray-900" : "text-white",
-                      "group inline-flex items-center rounded-md text-[15px] duration-500 font-medium hover:text-white hover:duration-500 hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      open ? "text-white opacity-60" : "text-white",
+                      "group inline-flex items-center rounded-md text-[15px] duration-500 font-medium hover:text-white hover:duration-500 hover:opacity-70 focus:outline-none"
                     )}
                   >
                     <span>Soluciones</span>
@@ -140,7 +140,7 @@ export default function Header() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="overflow-hidden rounded-lg shadow-lg">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
                             <a
@@ -210,8 +210,8 @@ export default function Header() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-gray-900" : "text-white",
-                      "group inline-flex items-center rounded-md text-[15px] duration-500 hover:duration-500 font-medium hover:text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      open ? "text-white opacity-60" : "text-white",
+                      "group inline-flex items-center rounded-md text-[15px] duration-500 hover:duration-500 font-medium hover:text-white hover:opacity-70 focus:outline-none"
                     )}
                   >
                     <span>More</span>
@@ -227,7 +227,7 @@ export default function Header() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
-                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="overflow-hidden rounded-lg shadow-lg ">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
@@ -310,7 +310,7 @@ export default function Header() {
           focus
           className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -321,7 +321,7 @@ export default function Header() {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
