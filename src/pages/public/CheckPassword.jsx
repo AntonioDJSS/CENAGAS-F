@@ -3,6 +3,7 @@ import servidorAxios from "../../config/servidorAxios";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import Alerta from "../../components/Alerta";
+import Footer from "../../components/Footer";
 
 export default function CheckPassword() {
   const params = useParams();
@@ -63,10 +64,10 @@ export default function CheckPassword() {
 
   return (
     <>
-      <div className="relative bg-gradient-to-r from-indigo-200 to-indigo-400">
+      <div className="relative bg-gradient-to-r from-white to-[#8cb87351]">
         <img
-          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-20"
-          src="https://images.unsplash.com/photo-1637607698829-de4171988e79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          className="absolute inset-0 h-full w-full object-cover blur-sm opacity-[0.15]"
+          src="https://imgur.com/bPC6bqL.png"
           alt="fondo"
         />
         <div class="h-screen relative">
@@ -74,6 +75,13 @@ export default function CheckPassword() {
             <div className="w-full max-w-md">
               {/* Este es el comienzo de div blanco */}
               <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
+                <div className="m-6">
+                  <img
+                    className="mx-auto h-12 w-auto"
+                    src="https://imgur.com/O1aNdwN.png"
+                    alt="Your Company"
+                  />
+                </div>
                 <div className="bg-white py-6 px-3 shadow sm:rounded-lg sm:px-10">
                   <div className="grid grid-row-3 gap-3">
                     <div>
@@ -95,7 +103,7 @@ export default function CheckPassword() {
                             ? "Es posible que tu token haya expirado,"
                             : "Recupera tú contraseña,"
                         } `}
-                        <span className="font text-indigo-500">
+                        <span className="font text-[#8CB873]">
                           {`${
                             alerta.statusPage
                               ? "intentalo de nuevo."
@@ -116,7 +124,7 @@ export default function CheckPassword() {
                   <div className="mt-4">
                     {msg && <Alerta alerta={alerta} />}
                   </div>
-                  <form onClick={handleSubmit} className="mt-4 space-y-4">
+                  <form onClick={handleSubmit} className="mt-10 space-y-4">
                     <div>
                       <label
                         htmlFor="email"
@@ -132,7 +140,7 @@ export default function CheckPassword() {
                           autoComplete="contraseña"
                           value={contraseña}
                           onChange={(e) => setContraseña(e.target.value)}
-                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-[#8CB873] focus:outline-none focus:ring-[#8CB873] sm:text-sm"
                         />
                       </div>
                     </div>
@@ -154,7 +162,7 @@ export default function CheckPassword() {
                           onChange={(e) =>
                             setConfirmarContraseña(e.target.value)
                           }
-                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-[#8CB873] focus:outline-none focus:ring-[#8CB873] sm:text-sm"
                         />
                       </div>
                     </div>
@@ -165,7 +173,7 @@ export default function CheckPassword() {
                       <div className="text-sm">
                         <a
                           href="/forgot-password"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                          className="font-medium text-[#8CB873] hover:text-[#97c77c]"
                         >
                           Volver al inicio
                         </a>
@@ -175,7 +183,7 @@ export default function CheckPassword() {
                     <div>
                       <button
                         type="submit"
-                        className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="flex w-full justify-center rounded-md border border-transparent bg-[#8CB873] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-[#acdb91] duration-500 focus:outline-none focus:ring-2 focus:ring-[#8CB873] focus:ring-offset-2"
                       >
                         Resetear contraseña
                       </button>
@@ -284,6 +292,9 @@ export default function CheckPassword() {
               </div>
             </form>
           </div> */}
+      <div className="z-50 -mt-28 relative">
+        <Footer />
+      </div>
     </>
   );
 }

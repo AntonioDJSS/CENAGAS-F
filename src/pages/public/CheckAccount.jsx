@@ -39,7 +39,7 @@ const CheckAccount = () => {
             <div>
               <img
                 className="mx-auto h-12 w-auto"
-                src="https://imgur.com/fWWekZ9.png"
+                src="https://imgur.com/3V30sRo.png"
                 alt="Your Company"
               />
               <h2 className="mt-10 text-center text-3xl font-bold tracking-tight text-gray-900">
@@ -79,7 +79,7 @@ const CheckAccount = () => {
               } `}
               <a
                 href="/"
-                className="font-medium text-blue-600 hover:text-blue-700"
+                className="font-medium text-gray-400 hover:text-gray-500"
               >
                 {`${
                   alerta.error ? "Comunicate con soporte." : "Iniciar Sesión"

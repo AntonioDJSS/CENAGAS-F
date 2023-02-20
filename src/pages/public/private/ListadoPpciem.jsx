@@ -2,21 +2,14 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Footer from "../Footer";
+import Listado from "../../../components/PPCIEM/Listado";
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
-
-export default function Example() {
+export default function ListadoPpciem() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <div className="z-40 relative h-screen isolate overflow-hidden bg-gray-100 flex items-center justify-center ">
+      <div className="relative h-screen isolate overflow-hidden bg-gray-100 flex items-center justify-center ">
         <img
           src="https://imgur.com/yidSyA9.png"
           alt=""
@@ -48,36 +41,11 @@ export default function Example() {
           </svg>
         </div>
         <div className="px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="text-center">
+          <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
+            <div className="mx-auto w-96 pb-10">
               <img src="https://imgur.com/O1aNdwN.png" className="" alt="" />
-              <div className="mt-10 flex items-center justify-center gap-x-4">
-                <a
-                  href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Catalogos
-                </a>
-                <a
-                  href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  PPCIEM
-                </a>
-                <a
-                  href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Fugas
-                </a>
-                <a
-                  href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Quemas y desgaste
-                </a>
-              </div>
             </div>
+            <Listado />
           </div>
         </div>
         <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">

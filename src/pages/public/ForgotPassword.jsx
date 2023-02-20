@@ -4,6 +4,7 @@ import { LockClosedIcon } from "@heroicons/react/20/solid";
 
 import Alerta from "../../components/Alerta";
 import servidorAxios from "../../config/servidorAxios";
+import Footer from "../../components/Footer";
 
 export default function ForgotPassword() {
   const [correo, setCorreo] = useState("");
@@ -53,10 +54,10 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <div className="relative bg-gradient-to-r from-indigo-100 to-indigo-200">
+      <div className="relative bg-gradient-to-r from-white to-[#8cb87351]">
         <img
           className="absolute inset-0 h-full w-full object-cover blur-sm opacity-[0.15]"
-          src="https://images.unsplash.com/photo-1637607698829-de4171988e79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          src="https://imgur.com/bPC6bqL.png"
           alt="fondo"
         />
         <div class="h-screen relative">
@@ -64,18 +65,20 @@ export default function ForgotPassword() {
             <div className="w-full max-w-md">
               {/* Este es el comienzo de div blanco */}
               <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
+                <div className="m-6">
+                  <img
+                    className="mx-auto h-12 w-auto"
+                    src="https://imgur.com/O1aNdwN.png"
+                    alt="Your Company"
+                  />
+                </div>
                 <div className="bg-white py-6 px-3 shadow sm:rounded-lg sm:px-10">
                   <div className="grid grid-row-3 gap-3">
                     <div>
-                      {/* <img
-                        className="mx-auto h-12 w-auto"
-                        src="https://imgur.com/fWWekZ9.png"
-                        alt="Your Company"
-                      /> */}
                       <h2 className="mt-2 text-center text-3xl font-bold tracking-tight text-gray-900">
                         Recupera tú contraseña
                       </h2>
-                      <p className="mt-1 text-center text-sm text-indigo-600">
+                      <p className="mt-1 text-center text-sm text-[#8CB873]">
                         Las instrucciones se enviaran a tú correo.
                       </p>
                     </div>
@@ -140,7 +143,7 @@ export default function ForgotPassword() {
                           autoComplete="email"
                           value={correo}
                           onChange={(e) => setCorreo(e.target.value)}
-                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                          className="block w-full appearance-none rounded-md border border-gray-300 px-2 py-2 placeholder-gray-400 shadow-sm focus:border-[#8CB873] focus:outline-none focus:ring-[#8CB873] sm:text-sm"
                         />
                       </div>
                     </div>
@@ -148,7 +151,7 @@ export default function ForgotPassword() {
                     <div>
                       <button
                         type="submit"
-                        className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="flex w-full justify-center rounded-md border border-transparent bg-[#8CB873] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-[#95c37b] focus:outline-none focus:ring-2 focus:ring-[#8CB873] focus:ring-offset-2"
                       >
                         Recuperar contraseña
                       </button>
@@ -160,6 +163,9 @@ export default function ForgotPassword() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="z-50 -mt-28 relative">
+        <Footer />
       </div>
     </>
   );

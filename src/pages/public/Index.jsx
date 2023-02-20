@@ -2,21 +2,14 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Footer from "../Footer";
+import Footer from "../../components/Footer";
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
-
-export default function Example() {
+export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <div className="z-40 relative h-screen isolate overflow-hidden bg-gray-100 flex items-center justify-center ">
+      <div className="relative h-screen isolate overflow-hidden bg-gray-100 flex items-center justify-center ">
         <img
           src="https://imgur.com/yidSyA9.png"
           alt=""
@@ -51,30 +44,18 @@ export default function Example() {
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <img src="https://imgur.com/O1aNdwN.png" className="" alt="" />
-              <div className="mt-10 flex items-center justify-center gap-x-4">
+              <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  className="rounded-xl bg-[#8CB873] px-20 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
-                  Catalogos
+                  Iniciar Sesión
                 </a>
                 <a
                   href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  className="rounded-xl bg-[#7A7A7A] px-20 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#8c8b8b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
-                  PPCIEM
-                </a>
-                <a
-                  href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Fugas
-                </a>
-                <a
-                  href="#"
-                  className="rounded-xl bg-[#8CB873] px-9 py-7 text-base font-thin leading-7 text-white shadow-sm hover:bg-[#9dcb83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Quemas y desgaste
+                  Registrarse
                 </a>
               </div>
             </div>
@@ -105,6 +86,9 @@ export default function Example() {
             </defs>
           </svg>
         </div>
+      </div>
+      <div className="z-50 -mt-28 relative">
+        <Footer />
       </div>
     </>
   );

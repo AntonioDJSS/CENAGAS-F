@@ -9,16 +9,16 @@ export default function Error404() {
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-12 w-auto"
-                  src="https://i.imgur.com/fWWekZ9.png"
+                  src="https://imgur.com/LqXNYX3.png"
                   alt=""
                 />
               </a>
             </div>
             <div className="py-16">
               <div className="text-center">
-                <p className="text-base font-semibold text-blue-500">404</p>
+                <p className="text-base font-semibold text-[#8CB873]">404</p>
                 <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  Page not found
+                  Page no encontrada
                 </h1>
                 <p className="mt-2 text-base text-gray-500">
                   Lo sentimos, no pudimos encontrar la página que estás
@@ -27,7 +27,7 @@ export default function Error404() {
                 <div className="mt-6">
                   <a
                     href="#"
-                    className="text-base font-medium text-blue-500 hover:text-blue-600"
+                    className="text-base font-medium text-[#8CB873] duration-500 hover:text-[#98c67d]"
                   >
                     Volver al inicio
                     <span aria-hidden="true"> &rarr;</span>

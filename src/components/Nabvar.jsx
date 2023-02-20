@@ -14,6 +14,7 @@ import {
   Squares2X2Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const solutions = [
   {
@@ -96,23 +97,23 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+export default function Nabvar() {
   return (
-    <Popover className="absolute w-full z-50">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
+    <Popover className="relative bg-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span className="sr-only">ucerti</span>
+              <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto duration-500 sm:h-[26px] hover:opacity-50 hover:duration-500"
-                src="https://imgur.com/DTd9B5Z.png"
+                className="h-8 w-auto sm:h-10"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -123,11 +124,18 @@ export default function Header() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-white opacity-60" : "text-white",
-                      "group inline-flex items-center rounded-md text-[15px] duration-500 font-medium hover:text-white hover:duration-500 hover:opacity-70 focus:outline-none"
+                      open ? "text-gray-900" : "text-gray-500",
+                      "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     )}
                   >
-                    <span>Soluciones</span>
+                    <span>Solutions</span>
+                    <ChevronDownIcon
+                      className={classNames(
+                        open ? "text-gray-600" : "text-gray-400",
+                        "ml-2 h-5 w-5 group-hover:text-gray-500"
+                      )}
+                      aria-hidden="true"
+                    />
                   </Popover.Button>
 
                   <Transition
@@ -140,7 +148,7 @@ export default function Header() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-                      <div className="overflow-hidden rounded-lg shadow-lg">
+                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
                             <a
@@ -188,21 +196,15 @@ export default function Header() {
 
             <a
               href="#"
-              className="text-[15px] font-medium text-white hover:text-white duration-500 hover:duration-500 hover:opacity-70"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Nosotros
+              Pricing
             </a>
             <a
               href="#"
-              className="text-[15px] font-medium text-white hover:text-white duration-500 hover:duration-500 hover:opacity-70"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Planes
-            </a>
-            <a
-              href="#"
-              className="text-[15px] font-medium text-white hover:text-white duration-500 hover:duration-500 hover:opacity-70"
-            >
-              Documentación
+              Docs
             </a>
 
             <Popover className="relative">
@@ -210,11 +212,18 @@ export default function Header() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-white opacity-60" : "text-white",
-                      "group inline-flex items-center rounded-md text-[15px] duration-500 hover:duration-500 font-medium hover:text-white hover:opacity-70 focus:outline-none"
+                      open ? "text-gray-900" : "text-gray-500",
+                      "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     )}
                   >
                     <span>More</span>
+                    <ChevronDownIcon
+                      className={classNames(
+                        open ? "text-gray-600" : "text-gray-400",
+                        "ml-2 h-5 w-5 group-hover:text-gray-500"
+                      )}
+                      aria-hidden="true"
+                    />
                   </Popover.Button>
 
                   <Transition
@@ -227,7 +236,7 @@ export default function Header() {
                     leaveTo="opacity-0 translate-y-1"
                   >
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
-                      <div className="overflow-hidden rounded-lg shadow-lg ">
+                      <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
@@ -289,10 +298,18 @@ export default function Header() {
             </Popover>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <button className="-mt-4 absolute button text-[15px] font-medium">
-              <span className="top-[26px] opacity-100 text-white">Log in</span>
-              <div className=" bg-white duration-500 px-4 py-1 h-8 w-24 rounded-full opacity-[0.25] hover:opacity-[0.40] hover:duration-500"></div>
-            </button>
+            <a
+              href="#"
+              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+              Sign in
+            </a>
+            <a
+              href="#"
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+            >
+              Sign up
+            </a>
           </div>
         </div>
       </div>
@@ -310,7 +327,7 @@ export default function Header() {
           focus
           className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg">
+          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -321,7 +338,7 @@ export default function Header() {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -358,7 +375,7 @@ export default function Header() {
 
                 <a
                   href="#"
-                  className="text-[15px] font-medium text-white hover:text-gray-700"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   Docs
                 </a>
